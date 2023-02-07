@@ -46,6 +46,11 @@
   margin-bottom: 10px;
 }
 
+.name:hover {
+  color: rgb(38, 198, 218);
+  cursor: pointer;
+}
+
 .status,
 .species {
   margin: 0;

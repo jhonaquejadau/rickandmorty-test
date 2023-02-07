@@ -1,0 +1,17 @@
+<div class="container">
+  <img [src]="character.image" alt="character.name" />
+  <div class="character-info flex">
+    <p>{{ character.name }}</p>
+    <p>ID: {{ character.id }}</p>
+  </div>
+  <p><span>Origin:</span> {{character.origin.name}}</p>
+  <p><span>Location:</span> {{character.location.name}}</p>
+  <div class="flex character-status">
+      <p><span>Species:</span> {{character.species}}</p>
+      <div class="flex">
+          <p>{{character.status}}</p>
+          <div [class]="character.status" class="status-circle"></div>
+      </div>
+  </div>
+  <button class="btn" (click)="navigateBack()">Back</button>
+</div>

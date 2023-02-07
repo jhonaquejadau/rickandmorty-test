@@ -3,9 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path:"",
-    redirectTo:"home",
-    pathMatch:"full"
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
   },
   {
     path: 'character-list',
@@ -18,6 +18,13 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () =>
       import('./pages/home/home.module').then((m) => m.HomeModule),
+  },
+  {
+    path: 'character/:id',
+    loadChildren: () =>
+      import(
+        './pages/character/character.module'
+      ).then((m) => m.CharacterModule),
   },
 ];
 

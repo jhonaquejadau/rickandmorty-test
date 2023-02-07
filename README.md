@@ -3,15 +3,20 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 
 # Screenshots
 
+**Version v0.4.0**
+
+- Character info design.
+<img src="src/assets/v0.4.0.PNG" alt="charcater info" />
+
 **Version v0.3.0**
 
 - Pagination features added.
-<img src="src/assets/v0.3.0.PNG" alt="page styled" />
+<img src="src/assets/v0.3.0.PNG" alt="pagination" />
 
 **Version v0.2.0**
 
 - Form input modified to filter characters by name.
-<img src="src/assets/v0.2.0.PNG" alt="page styled" />
+<img src="src/assets/v0.2.0.PNG" alt="from input" />
 
 **Version v0.1.2**
 

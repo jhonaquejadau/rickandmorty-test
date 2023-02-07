@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Character } from '@app/interfaces/index';
+import { Character, CharacterDetail } from '@app/interfaces/index';
 import { environment } from '@environments/index';
 
 @Injectable({
@@ -15,5 +15,11 @@ export class CharacterService {
   }
   allCharacters(page:number = 1) {
     return this.http.get<Character[]>(`${environment.baseUrl}/?page=${page}`)
+  }
+  getCharacter(id:number){
+    return this.http.get<CharacterDetail[]>(`${environment.baseUrl}/${id}`)
+  }
+  getLocation(url:string) {
+    return this.http.get(`${url}`)
   }
 }

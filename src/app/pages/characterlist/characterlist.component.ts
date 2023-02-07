@@ -9,23 +9,24 @@ import { CharacterService } from '@app/shared';
   styleUrls: ['./characterlist.component.css'],
 })
 export class CharacterlistComponent implements OnInit {
+
   characters: Character[] = [];
-  allCharacters: Character[] = [];
-  private query: string = '';
+  
+  private query!: string;
   public page!: number;
 
   constructor(
     private characterService: CharacterService,
     private readonly route: ActivatedRoute
   ) {
-    this.getCharacterSearched();
+    this.getCharactedSearched();
   }
 
   ngOnInit(): void {
     this.getAllCharacters();
   }
 
-  private getCharacterSearched(): void {
+  private getCharactedSearched(): void {
     this.route.queryParams.subscribe((params: Params) => {
       // console.log('params ->', params);
       this.query = params['input'];
@@ -38,7 +39,8 @@ export class CharacterlistComponent implements OnInit {
       // if (res && res.results.length > 0) or if (res?.results?.length)
       if (res?.results?.length) {
         console.log('repsonse -> ', res);
-        this.characters = [...res.results];
+        this.characters = [];
+        this.characters = [...this.characters,...res.results];
       } else {
         this.characters = [];
       }
