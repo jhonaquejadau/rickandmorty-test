@@ -10,7 +10,10 @@ export class CharacterService {
 
   constructor(private http: HttpClient) { 
   }
-  searchCharacters(query:string = ""){
+  filterCharacters(query:string = ""){
     return this.http.get<Character[]>(`${environment.baseUrl}/?name=${query}`)
+  }
+  allCharacters(page:number = 1) {
+    return this.http.get<Character[]>(`${environment.baseUrl}/?page=${page}`)
   }
 }

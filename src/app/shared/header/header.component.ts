@@ -15,7 +15,6 @@ export class HeaderComponent implements OnInit{
 
   characterSearch(value: string) {
     if (value && value.length > 0) {
-      console.log(value)
       this.router.navigate(['/character-list'], {
         queryParams: { input: value },
       });
