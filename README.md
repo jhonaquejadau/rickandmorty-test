@@ -33,6 +33,7 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 **v0.4.0**
 
 * Responsive design fixed.
+* Character information added.
 
 **v0.3.0**
 
