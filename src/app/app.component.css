@@ -1,15 +1,23 @@
 .container {
-    width: 100%;
-    border: 2px solid black;
-    margin: 100px auto 32px;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 100%;
+  margin: 100px auto 32px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .background {
-    position: fixed;
-    inset: 0;
-    z-index: 1;
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+}
+
+/*MEDIA QUERIES*/
+@media (max-width: 1700px) {
+  .container {
+    margin: 250px auto 32px;
+  }
 }

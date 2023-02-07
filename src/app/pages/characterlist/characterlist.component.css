@@ -14,7 +14,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-
 }
 
 .card {
@@ -83,4 +82,24 @@ span {
 
 .card:hover {
   transform: scale(1.03);
+}
+
+/*MEDIA QUERIES*/
+
+@media (max-width: 1550px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (max-width: 960px) {
+  .card-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }

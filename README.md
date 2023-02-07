@@ -17,6 +17,10 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 
 # Versions
 
+**v0.4.0**
+
+* Responsive design fixed.
+
 **v0.3.0**
 
 * Ngx pagination added.
