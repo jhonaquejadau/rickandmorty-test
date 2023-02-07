@@ -3,6 +3,9 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 
 # Screenshots
 
+**Version v0.1.2**
+<img src="src/assets/v0.1.2.PNG" alt="page styled" />
+
 **Version v0.1.1**
 <img src="src/assets/v0.1.1.PNG" alt="page" />
 
