@@ -1,2 +1,12 @@
-<p>characterlist works!</p>
-
+<div class="card-container">
+  <div class="card" *ngFor="let character of characters">
+    <img class="card-img" [src]="character.image" [alt]="character.name" />
+    <div class="card-info">
+      <p class="name">{{ character.name }}</p>
+      <p class="status"><span>Status:</span> {{ character.status }}</p>
+      <p class="gender"><span>Gender:</span> {{ character.gender }}</p>
+      <p class="species"><span>Specie:</span> {{ character.species }}</p>
+    </div>
+    <div class="card-id"><span>#: </span>{{ character.id }}</div>
+  </div>
+</div>

@@ -25,9 +25,6 @@ nav p {
 
 nav p:hover {
     color: rgb(198, 255, 0);
-}
-
-nav .doc:hover {
     cursor: pointer;
 }
 

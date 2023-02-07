@@ -3,6 +3,9 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 
 # Screenshots
 
+**Version v0.2.0**
+<img src="src/assets/v0.2.0.PNG" alt="page styled" />
+
 **Version v0.1.2**
 <img src="src/assets/v0.1.2.PNG" alt="page styled" />
 
@@ -10,6 +13,12 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 <img src="src/assets/v0.1.1.PNG" alt="page" />
 
 # Versions
+
+**v0.2.0**
+
+* Form input working.
+* Styles updates.
+
 
 **v0.1.2**
 
