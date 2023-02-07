@@ -1,12 +1,15 @@
 <header>
   <nav>
-    <p>header works!</p>
+    <div class="logo">
+      <img class="logo-img" src="../../../assets/logo.png" alt="logo" />
+      <p>RickAndMortyApp</p>
+    </div>
     <input
       #input
       type="text"
       placeholder="Search character by name..."
       (keyup)="characterSearch(input.value)"
     />
-    <p>API Documentation</p>
+    <p class="doc">API Documentation</p>
   </nav>
 </header>

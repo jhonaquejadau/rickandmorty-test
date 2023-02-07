@@ -1,0 +1,6 @@
+p {
+    position: relative;
+    color: rgb(198, 255, 0);
+    font-size: 5rem;
+    z-index: 3;
+}

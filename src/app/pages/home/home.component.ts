@@ -17,14 +17,14 @@ export class HomeComponent {
   }
 
   private getCharacters(): void {
-    const a = this.characterService.searchCharacters(this.query);
-    console.log('a ->', a)
-    this.characterService.searchCharacters(this.query)
-    .subscribe((res:any) => {
-      const {info, results} = res;
-      console.log("repsonse -> ",res);
-      
-      this.characters = [...this.characters, ...results]
-    })
+    this.characterService.searchCharacters(this.query).subscribe((res: any) => {
+      // if (res && res.results.length > 0) or if (res?.results?.length)
+      if (res?.results?.length) {
+        console.log('repsonse -> ', res);
+        this.characters = [...this.characters, ...res.results];
+      } else {
+        this.characters = [];
+      }
+    });
   }
 }

@@ -8,6 +8,10 @@ This project was built for a technical interview... Designed by [jaqudev_](https
 
 # Versions
 
+**v0.1.2**
+
+* New styles added.
+
 **v0.1.1**
 
 * TS alias path for imports configured.
