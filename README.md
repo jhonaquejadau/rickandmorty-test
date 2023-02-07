@@ -1,5 +1,41 @@
 # RickandmortyTest
+This project was built for a technical interview... Designed by [jaqudev_](https://github.com/jhonaquejadau)
 
+# Screenshots
+
+**Version v0.1.1**
+<img src="src/assets/v0.1.1.PNG" alt="page" />
+
+# Versions
+
+**v0.1.1**
+
+* TS alias path for imports configured.
+* New environment credential folder.
+* New fonts styles.
+* New Search input.
+* Project structure:
+    - Interfaces fodler.
+    - Pages folder.
+    - Shared folder.
+ 
+# Libraries, Frameworks, Technologies
+
+* NodeJs
+* JavaScript - TypeScript
+* Css - Html
+* Angular
+* HttpClientModule
+* Class components
+
+# Credits 
+Thanks to [RickAndMortyApi](https://rickandmortyapi.com/documentation/#introduction) for creating an awesome API for developers. I appreciate your team's hard work in providing the data needed to take my coding skills to the next level.
+
+# Copyright Note
+This is a project for a technical interview, is non-commercial. This, is just for improve my web development skills using. Don't heasitate left me a like in mi repos.
+
+
+# ANGULAR - GUIDE
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.4.
 
 ## Development server
