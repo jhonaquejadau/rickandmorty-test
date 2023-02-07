@@ -1,18 +1,26 @@
 # RickandmortyTest
-This project was built for a technical interview... Designed by [jaqudev_](https://github.com/jhonaquejadau)
+This project was built for a technical interview... Designed by [jaqudev_](https://github.com/jhonaquejadau). This design was taked for a previous projects that I built using React Js. [Link](https://jhonaquejadau.github.io/rickandmortyapi-app/)
 
 # Screenshots
 
 **Version v0.3.0**
-<img src="src/assets/v0.2.0.PNG" alt="page styled" />
+
+- Pagination features added.
+<img src="src/assets/v0.3.0.PNG" alt="page styled" />
 
 **Version v0.2.0**
+
+- Form input modified to filter characters by name.
 <img src="src/assets/v0.2.0.PNG" alt="page styled" />
 
 **Version v0.1.2**
+
+- Styling design.
 <img src="src/assets/v0.1.2.PNG" alt="page styled" />
 
 **Version v0.1.1**
+
+- First design of RickAndMorty App.
 <img src="src/assets/v0.1.1.PNG" alt="page" />
 
 # Versions
