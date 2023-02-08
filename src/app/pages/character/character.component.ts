@@ -9,13 +9,12 @@ import { CharacterService } from '@app/shared';
 })
 export class CharacterComponent implements OnInit {
   character: any = {};
-  // residents: Character[] = [];
 
   constructor(
     private readonly route: ActivatedRoute,
     private characterServices: CharacterService,
-    // private location: Location
   ) {}
+
   ngOnInit(): void {
     this.getCharacterDetail();
   }
@@ -25,28 +24,8 @@ export class CharacterComponent implements OnInit {
       this.characterServices
         .getCharacter(params['id'])
         .subscribe((res: any) => {
-          if (res.id) {
-            console.log(res);
-            this.character = res;
-            // this.getLocationInfo(res.location.url)
-          } else {
-            this.character = {};
-          }
+          this.character = res;
         });
     });
   }
-
-  // navigateBack(): void {
-  //   this.location.back();
-  // }
-
-  // getLocationInfo(url: string): void {
-  //   this.characterServices.getLocation(url).subscribe((res: any) => {
-  //     for (let i = 0; i < res.residents.length; i++){
-  //       this.characterServices.getLocation(res.residents[i]).subscribe((resi:any) => {
-  //         this.residents.push(resi)
-  //       })
-  //     }
-  //   });
-  // }
 }

@@ -6,20 +6,19 @@ import { Router } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent implements OnInit{
+export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
 
-  ngOnInit(): void {
-    
-  }
+  ngOnInit(): void {}
 
   characterSearch(value: string) {
-    if (value && value.length > 0) {
+    //if (value && value.length > 0) or if(value?.length)
+    if (value?.length) {
       this.router.navigate(['/character-list'], {
         queryParams: { input: value },
       });
     } else {
-      this.router.navigate(["/home"])
+      this.router.navigate(['/home']);
     }
   }
 }

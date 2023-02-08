@@ -6,13 +6,7 @@ import { HomeComponent } from './home.component';
 import { CharacterlistModule } from '../characterlist';
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    CharacterlistModule
-  ]
+  declarations: [HomeComponent],
+  imports: [CommonModule, HomeRoutingModule, CharacterlistModule],
 })
-export class HomeModule { }
+export class HomeModule {}

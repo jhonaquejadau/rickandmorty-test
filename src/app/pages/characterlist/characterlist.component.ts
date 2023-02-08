@@ -9,50 +9,47 @@ import { CharacterService } from '@app/shared';
   styleUrls: ['./characterlist.component.css'],
 })
 export class CharacterlistComponent implements OnInit {
-
-  characters: Character[] = [];
-  
-  private query!: string;
   public page!: number;
+  render: boolean = false;
+  characters: Character[] = [];
 
   constructor(
     private characterService: CharacterService,
-    private readonly route: ActivatedRoute
+    private route: ActivatedRoute
   ) {
-    this.getCharactedSearched();
+    this.getCharacterSearched();
   }
 
   ngOnInit(): void {
     this.getAllCharacters();
   }
 
-  private getCharactedSearched(): void {
+  private getCharacterSearched(): void {
     this.route.queryParams.subscribe((params: Params) => {
-      // console.log('params ->', params);
-      this.characterService.filterCharacters(params['input']).subscribe((res: any) => {
-        // if (res && res.results.length > 0) or if (res?.results?.length)
-        if (res?.results?.length) {
-          this.characters = [];
-          this.characters = [...res.results];
-        } else {
-          this.characters = [];
-        }
-      });
+      this.characterService
+        .filterCharacters(params['input'])
+        .subscribe((res: any) => {
+          // if (res && res.results.length > 0) or if (res?.results?.length)
+          if (res?.results?.length) {
+            this.characters = [];
+            this.characters = [...res.results];
+          } else {
+            this.characters = [];
+          }
+        });
     });
   }
 
   private getAllCharacters(): void {
     for (let i = 1; i < 43; i++) {
-      
       this.characterService.allCharacters(i).subscribe((res: any) => {
         // if (res && res.results.length > 0) or if (res?.results?.length)
         if (res?.results?.length) {
-          this.characters = [...this.characters, ...res.results]
+          this.characters = [...this.characters, ...res.results];
         } else {
           this.characters = [];
         }
       });
     }
   }
-  
 }
