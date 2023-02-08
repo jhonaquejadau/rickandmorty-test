@@ -22,9 +22,16 @@ const routes: Routes = [
   {
     path: 'character/:id',
     loadChildren: () =>
-      import(
-        './pages/character/character.module'
-      ).then((m) => m.CharacterModule),
+      import('./pages/character/character.module').then(
+        (m) => m.CharacterModule
+      ),
+  },
+  {
+    path: '**',
+    loadChildren: () =>
+      import('./pages/pagenotfound/pagenotfound.module').then(
+        (m) => m.PagenotfoundModule
+      ), 
   },
 ];
 
