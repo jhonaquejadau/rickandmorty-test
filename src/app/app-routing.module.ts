@@ -23,7 +23,7 @@ const routes: Routes = [
     path: 'character/:id',
     loadChildren: () =>
       import(
-        './pages/character/character.module'
+        './pages/characterlist/components/character/character.module'
       ).then((m) => m.CharacterModule),
   },
 ];

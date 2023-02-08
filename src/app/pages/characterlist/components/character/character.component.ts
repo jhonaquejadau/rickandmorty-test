@@ -1,7 +1,5 @@
-import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Character } from '@app/interfaces';
 import { CharacterService } from '@app/shared';
 
 @Component({
@@ -13,13 +11,10 @@ export class CharacterComponent implements OnInit {
   character: any = {};
   // residents: Character[] = [];
 
-  private Alive: string = 'Alive';
-  private dead: string = 'Dead';
-  // private unknown: string = 'unknown';
   constructor(
     private readonly route: ActivatedRoute,
     private characterServices: CharacterService,
-    private location: Location
+    // private location: Location
   ) {}
   ngOnInit(): void {
     this.getCharacterDetail();
@@ -41,9 +36,9 @@ export class CharacterComponent implements OnInit {
     });
   }
 
-  navigateBack(): void {
-    this.location.back();
-  }
+  // navigateBack(): void {
+  //   this.location.back();
+  // }
 
   // getLocationInfo(url: string): void {
   //   this.characterServices.getLocation(url).subscribe((res: any) => {

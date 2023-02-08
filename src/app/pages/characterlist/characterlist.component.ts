@@ -29,24 +29,18 @@ export class CharacterlistComponent implements OnInit {
   private getCharactedSearched(): void {
     this.route.queryParams.subscribe((params: Params) => {
       // console.log('params ->', params);
-      this.query = params['input'];
-      this.searchCharacters();
+      this.characterService.filterCharacters(params['input']).subscribe((res: any) => {
+        // if (res && res.results.length > 0) or if (res?.results?.length)
+        if (res?.results?.length) {
+          this.characters = [];
+          this.characters = [...res.results];
+        } else {
+          this.characters = [];
+        }
+      });
     });
   }
 
-  private searchCharacters(): void {
-    this.characterService.filterCharacters(this.query).subscribe((res: any) => {
-      // if (res && res.results.length > 0) or if (res?.results?.length)
-      if (res?.results?.length) {
-        console.log('repsonse -> ', res);
-        this.characters = [];
-        this.characters = [...this.characters,...res.results];
-      } else {
-        this.characters = [];
-      }
-    });
-  }
-  
   private getAllCharacters(): void {
     for (let i = 1; i < 43; i++) {
       
