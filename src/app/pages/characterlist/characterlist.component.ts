@@ -10,7 +10,6 @@ import { CharacterService } from '@app/shared';
 })
 export class CharacterlistComponent implements OnInit {
   public page!: number;
-  render: boolean = false;
   characters: Character[] = [];
 
   constructor(
@@ -32,7 +31,7 @@ export class CharacterlistComponent implements OnInit {
           // if (res && res.results.length > 0) or if (res?.results?.length)
           if (res?.results?.length) {
             this.characters = [];
-            this.characters = [...res.results];
+            this.characters = [...this.characters,...res.results];
           } else {
             this.characters = [];
           }
